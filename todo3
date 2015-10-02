@@ -35,21 +35,52 @@
   <body bgcolor=lightgray>
   <article id=high>
     <h2>High Priority</h2>
-    <ul>
-      <li>Study for CS Quiz</li>
-    </ul>
+    <html>
+  <style>
+    article {
+      height: 250px;
+      width: 300px;
+      float: left;
+      overflow:auto;
+    }
+    h2 {
+      text-align: center;
+    }
+    #high {
+          background-color: red;
+          color: white;
+    }
+    #medium {
+          background-color: orange;
+          color:white;
+    }
+    #low {
+          background-color: gray;
+    }
+    #done {
+          background-color:black;
+          color:blue;
+    }
+    footer {
+      clear: both;
+    }
+  </style>
+  <body bgcolor=lightgray>
+  <article id=high>
+    <h2>High Priority</h2>
+    <input type="checkbox" name="group1" value="Study for CS Quiz">Study for CS Quiz <br />
   </article>
   <article id=medium>
     <h2>Medium Priority</h2>
     <ul>
-      <li>Work out</li>
-      <li>Read Greek Textbook</li>
+      <input type="checkbox" name="group1" value="work out">Work Out <br />
+      <input type="checkbox" name="group1" value="read Greek Textbook">Read Greek Textbook <br />
     </ul>
   </article>
   <article id=low>
     <h2>Low Priority</h2>
     <ul>
-      <li>Call Mom</li>
+      <input type="checkbox" name="group1" value="call mom">Call Mom <br />
     </ul>
   </article>
   <article id=done>
@@ -63,3 +94,4 @@
       <p> ToDoList2 by Emily Holm</p>
   </footer>
 </html>
+
