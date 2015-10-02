@@ -1,1 +1,65 @@
+<html>
+<head>
+<title> To Do List Version 3 </title>
 
+  <style>
+    article {
+      height: 250px;
+      width: 300px;
+      float: left;
+      overflow:auto;
+    }
+    h2 {
+      text-align: center;
+    }
+    #high {
+          background-color: red;
+          color: white;
+    }
+    #medium {
+          background-color: orange;
+          color:white;
+    }
+    #low {
+          background-color: gray;
+    }
+    #done {
+          background-color:black;
+          color:blue;
+    }
+    footer {
+      clear: both;
+    }
+  </style>
+  </head>
+  <body bgcolor=lightgray>
+  <article id=high>
+    <h2>High Priority</h2>
+    <ul>
+      <li>Study for CS Quiz</li>
+    </ul>
+  </article>
+  <article id=medium>
+    <h2>Medium Priority</h2>
+    <ul>
+      <li>Work out</li>
+      <li>Read Greek Textbook</li>
+    </ul>
+  </article>
+  <article id=low>
+    <h2>Low Priority</h2>
+    <ul>
+      <li>Call Mom</li>
+    </ul>
+  </article>
+  <article id=done>
+    <h2>Done </h2>
+    <ul>
+      <li>Make To-Do List</li>
+    </ul>
+  </article>
+  </body>
+  <footer>
+      <p> ToDoList2 by Emily Holm</p>
+  </footer>
+</html>
