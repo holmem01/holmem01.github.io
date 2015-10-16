@@ -23,21 +23,25 @@
       }
   
   </style>
-  <script>
+  <script type="text/javascript">
     makeNewTask = function() {
-      ulist = document.querySelector("#list")
-      task = document.createElement("li")
-      checkb = document.createElement("input")
-      pri = document.querySelector("#priority").value
+      var pri;
+      var inputText;
+      var ulist;
+      
+      ulist = document.querySelector("#list");
+      task = document.createElement("li");
+      checkb = document.createElement("input");
+      pri = document.querySelector("#priority").value;
     
-      inputText = document.querySelector("#newtask").value
-      taskText = document.createTextNode("inputText")
+      inputText = document.querySelector("#newtask").value;
+      taskText = document.createTextNode("inputText");
     
-      checkb.type = "checkbox"
-      task.class = "pri"
-      task.appendChild("checkb")
-      task.appendChild("taskText")
-      ulist.appendChild("task")
+      checkb.type = "checkbox";
+      task.class = "pri";
+      task.appendChild("checkb");
+      task.appendChild("taskText");
+      ulist.appendChild("task");
     }
   </script>
 </header>
@@ -54,7 +58,7 @@
       <option>Medium</option>
       <option>low</option>
     </select>
-    <button onclick = "makeNewTask();">Add Task</button>
+    <button onclick="makeNewTask();">Add Task</button>
   </section>
 </body>
 </html>
