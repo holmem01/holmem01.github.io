@@ -10,7 +10,7 @@
       background-color:gray;
       }
     section {
-      background-color:blue;
+      background-color:green;
       }
     .high {
       color:red;
@@ -23,6 +23,23 @@
       }
   
   </style>
+  <script>
+    makeNewTask = function() {
+      ulist = document.querySelector("#list")
+      task = document.createElement("li")
+      checkb = document.createElement("input")
+      pri = document.querySelector("#priority").value
+    
+      inputText = document.querySelector("#newtask").value
+      taskText = document.createTextNode("inputText")
+    
+      checkb.type = "checkbox"
+      task.class = "pri"
+      task.appendChild("checkb")
+      task.appendChild("taskText")
+      ulist.appendChild("task")
+    }
+  </script>
 </header>
 <body>
   <h2> Busy Busy </h2>
@@ -37,24 +54,7 @@
       <option>Medium</option>
       <option>low</option>
     </select>
-    <button onclick="makeNewTask();">Add Task</button>
+    <button onclick = "makeNewTask();">Add Task</button>
   </section>
 </body>
-<script>
-  makeNewTask = function() {
-    ulist = document.querySelector("#list")
-    task = document.createElement("li")
-    checkb = document.createElement("input")
-    pri = document.querySelector("#priority").value
-    
-    inputText = document.querySelector("#newtask").value
-    taskText = document.createTextNode("inputText")
-    
-    checkb.type = "checkbox"
-    task.class = "pri"
-    task.appendChild("checkb")
-    task.appendChild("taskText")
-    ulist.appendChild("task")
-  }
-</script>
 </html>
