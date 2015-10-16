@@ -23,27 +23,6 @@
       }
   
   </style>
-  <script type="text/javascript">
-    makeNewTask = function() {
-      var pri;
-      var inputText;
-      var ulist;
-      
-      ulist = document.querySelector("#list");
-      task = document.createElement("li");
-      checkb = document.createElement("input");
-      pri = document.querySelector("#priority").value;
-    
-      inputText = document.querySelector("#newtask").value;
-      taskText = document.createTextNode("inputText");
-    
-      checkb.type = "checkbox";
-      task.class = "pri";
-      task.appendChild("checkb");
-      task.appendChild("taskText");
-      ulist.appendChild("task");
-    }
-  </script>
 </header>
 <body>
   <h2> Busy Busy </h2>
@@ -59,6 +38,29 @@
       <option>low</option>
     </select>
     <button onclick="makeNewTask();">Add Task</button>
+    <script type="text/javascript">
+      makeNewTask = function() {
+        var pri;
+        var inputText;
+        var ulist;
+        var string;
+      
+        ulist = document.querySelector("#list");
+        task = document.createElement("li");
+        checkb = document.createElement("input");
+        pri = document.querySelector("#priority").value;
+    
+        inputText = document.querySelector("#newtask").value;
+        string = "<p>" + inputText + "</p>";
+        taskText = document.createTextNode("string");
+    
+        checkb.type = "checkbox";
+        task.class = "pri";
+        task.appendChild("checkb");
+        task.appendChild("taskText");
+        ulist.appendChild("task");
+      }
+    </script>
   </section>
 </body>
 </html>
