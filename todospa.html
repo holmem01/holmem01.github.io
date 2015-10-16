@@ -1,0 +1,60 @@
+<html>
+<header>
+  <title> To Do SPA </title>
+  <style>
+    h2 {
+      color: black;
+      text-align: center;
+      }
+    body {
+      background-color:light-gray;
+      }
+    section {
+      background-color:blue;
+      }
+    .high {
+      color:red;
+      }
+    .medium {
+      color:orange;
+      }
+    .low {
+      color:yellow;
+      }
+  
+  </style>
+</header>
+<body>
+  <h2> Busy Busy </h2>
+  <section>
+    <ul id = "list">
+    </ul>
+  </section>
+  <section>
+    <input type="text" id="newtask" value="enter task here" label="Enter Task" />
+    <select id="priority">
+      <option>High</option>
+      <option>Medium</option>
+      <option>low</option>
+    </select>
+    <button onclick="makeNewTask();">Add Task</button>
+  </section>
+</body>
+<script>
+  makeNewTask = function() {
+    ulist = document.querySelector("#list")
+    task = document.createElement("li")
+    checkb = document.createElement("input")
+    pri = document.querySelector("#priority").value
+    
+    inputText = document.querySelector("#newtask").value
+    taskText = document.createTextNode("inputText")
+    
+    checkb.type = "checkbox"
+    task.class = "pri"
+    task.appendChild("checkb")
+    task.appendChild("taskText")
+    ulist.appendChild("task")
+  }
+</script>
+</html>
