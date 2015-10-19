@@ -39,10 +39,7 @@
     <button onclick="makeNewTask();">Add Task</button>
     <script type="text/javascript">
       makeNewTask = function() {
-        var pri;
-        var inputText;
-        var ulist;
-        var string;
+        var pri, inputText, ulist, string;
       
         ulist = document.querySelector("#list");
         task = document.createElement("li");
@@ -53,10 +50,9 @@
         taskText = document.createTextNode("inputText");
     
         checkb.type = "checkbox";
-        task.class = "pri";
-        task.appendChild("checkb");
-        task.appendChild("taskText");
-        ulist.appendChild("task");
+        task.appendChild(checkb);
+        task.appendChild(taskText);
+        ulist.appendChild(task);
       }
     </script>
   </section>
