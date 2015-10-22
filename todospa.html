@@ -63,16 +63,14 @@
          } else {
            this.parentNode.classList.remove("done");
          }
-       }    
+         localSave("list")
+         restoreList("list", "doneTask")
+         }    
         checkb.type = "checkbox";
         checkb.onclick = doneTask;
         task.appendChild(checkb);
         task.appendChild(taskText);
         ulist.appendChild(task);
-      }
-
-     localSave("list")
-    restoreList("list", "doneTask")
     </script>
   
   </section>
