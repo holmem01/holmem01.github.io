@@ -47,9 +47,6 @@
     <button onclick="makeNewTask()">Add Task</button>
   <script type = "text/javascript" src = "http://bnmnetp.github.io/CS130/listsavers.js"></script>
   <script type="text/javascript">
-      window.onload= function() {
-         restoreList("list", doneTask)
-      }
       makeNewTask = function() {
         var pri, inputText, ulist, string;
       
@@ -60,7 +57,6 @@
         task.className = pri;
         inputText = document.querySelector("#newtask").value;
         taskText = document.createTextNode(inputText);
-        localSave("list")
       }
        doneTask = function() {
          if (this.checked) {
@@ -74,7 +70,6 @@
         task.appendChild(checkb);
         task.appendChild(taskText);
         ulist.appendChild(task);
-        localSave("list")
     </script>
   </section>
   <section>
