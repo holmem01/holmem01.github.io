@@ -1,1 +1,29 @@
-
+<style>
+    h2 {
+      color: black;
+      text-align: center;
+      }
+    ul {
+      list-style-type: none;
+    }
+    body {
+      background-color:gray;
+      }
+    section {
+      background-color:green;
+      }
+    .high {
+      color:red;
+      }
+    .medium {
+      color:orange;
+      }
+    .low {
+      color:gray;
+      }
+    .done {
+      color:black;
+      text-decoration: line-through;
+    }
+  
+  </style>
