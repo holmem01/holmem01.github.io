@@ -1,4 +1,4 @@
-<style>
+
     h2 {
       color: black;
       text-align: center;
@@ -7,50 +7,25 @@
       list-style-type: none;
     }
     body {
-      background-color:gray;
+      background-color:LightCyan;
       }
     section {
-      background-color:green;
+      background-color:Teal;
+      font: 18px arial, sans-serif;
       }
-    .high {
+    #entry {
+        text-align: center;
+      }
+    .High {
       color:red;
       }
-    .medium {
+    .Medium {
       color:orange;
       }
-    .low {
+    .Low {
       color:gray;
       }
     .done {
       color:black;
       text-decoration: line-through;
     }
-</style>
-<script type = "text/javascript" src = "http://bnmnetp.github.io/CS130/listsavers.js"></script>
-<script type="text/javascript">
-      makeNewTask = function() {
-        var pri, inputText, ulist, string;
-      
-        ulist = document.querySelector("#list");
-        task = document.createElement("li");
-        checkb = document.createElement("input");
-        pri = document.querySelector("#priority").value;
-        task.className = pri;
-        inputText = document.querySelector("#newtask").value;
-        taskText = document.createTextNode(inputText);
-       doneTask = function() {
-         if (this.checked) {
-           this.parentNode.classList.add("done");
-         } else {
-           this.parentNode.classList.remove("done");
-         }
-       }    
-        checkb.type = "checkbox";
-        checkb.onclick = doneTask;
-        task.appendChild(checkb);
-        task.appendChild(taskText);
-        ulist.appendChild(task);
-      }
-     localSave("list")
-    restoreList("list", doneTask)
-</script>
