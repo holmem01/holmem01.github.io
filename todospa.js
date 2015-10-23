@@ -1,5 +1,3 @@
-<script type = "text/javascript" src = "http://bnmnetp.github.io/CS130/listsavers.js"></script>
-
 window.onload=function() {
         restorelist('alist', doneTask)
       }
