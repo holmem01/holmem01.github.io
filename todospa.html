@@ -47,8 +47,10 @@
     <button onclick="makeNewTask()">Add Task</button>
   <script type = "text/javascript" src = "http://bnmnetp.github.io/CS130/listsavers.js"></script>
   <script type="text/javascript">
+      window.onload=function() {
+        restorelist('alist', doneTask)
+      }
       makeNewTask = function() {
-        window.onload 
         var pri, inputText, ulist, string;
       
         ulist = document.querySelector("#list");
@@ -64,7 +66,7 @@
          } else {
            this.parentNode.classList.remove("done");
          }
-         localSave("list")
+         localSave('alist')
        }    
         checkb.type = "checkbox";
         checkb.onclick = doneTask;
@@ -72,13 +74,12 @@
         task.appendChild(taskText);
         ulist.appendChild(task);
       }
-     localSave("list")
-    restoreList("list", "doneTask")
+        localSave('alist')
     </script>
   
   </section>
   <section>
-    <ul id = "list"></ul>
+    <ul id = "alist"></ul>
   </section>
 
 </body>
