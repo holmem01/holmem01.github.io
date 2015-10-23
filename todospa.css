@@ -17,13 +17,13 @@
         text-align: center;
       }
     .High {
-      color:red;
+      color:firebrick;
       }
     .Medium {
       color:orange;
       }
     .Low {
-      color:gray;
+      color:lemonchiffon;
       }
     .done {
       color:black;
