@@ -1,5 +1,5 @@
 window.onload=function() {
-        restorelist('alist', doneTask)
+        restoreList('alist', doneTask)
       }
 makeNewTask = function() {
         var pri, inputText, ulist, string;
