@@ -1,6 +1,15 @@
 window.onload=function() {
-        restoreList('alist', doneTask())
+        restoreList('alist', doneTask)
       }
+doneTask = function() {
+         if (this.checked) {
+           this.parentNode.classList.add("done");
+         } else {
+           this.parentNode.classList.remove("done");
+         }
+         localSave('alist')
+       }    
+       
 makeNewTask = function() {
         var pri, inputText, ulist, string;
       
@@ -11,14 +20,7 @@ makeNewTask = function() {
         task.className = pri;
         inputText = document.querySelector("#newtask").value;
         taskText = document.createTextNode(inputText);
-    doneTask = function() {
-         if (this.checked) {
-           this.parentNode.classList.add("done");
-         } else {
-           this.parentNode.classList.remove("done");
-         }
-         localSave('alist')
-       }    
+    
         checkb.type = "checkbox";
         checkb.onclick = doneTask;
         task.appendChild(checkb);
@@ -26,5 +28,4 @@ makeNewTask = function() {
         ulist.appendChild(task);
         localSave('alist')
       }
-
   
